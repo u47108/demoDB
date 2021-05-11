@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework:
+        data: INFO
+        jdbc:
+          core:
+            JdbcTemplate: DEBUG
+spring:
+  application:
+    name: template-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    username: postgres
+    password: everislatam
+    driver-class-name: org.postgresql.Driver
+  jpa:
+   properties:
+    hibernate:
+     dialect : org.hibernate.dialect.PostgreSQLDialect
+   hibernate:
+    ddl-auto: none
+    show-sql: true
